@@ -1,0 +1,64 @@
+.title{
+    text-align:center;
+    font-size: 32px;
+    top: 0;
+}
+.buttons_container{
+    position:relative;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 99;
+    /* top: 0; */
+    /* padding-inline: 600px;
+    display: inline-block;
+    margin: 0 auto;
+    justify-content: center; */
+}
+
+.upload_button{
+    width:20vw;
+    height:50px;
+    text-align:center;
+    font-size: 20px;
+    margin-right:100px;
+    background-color: lightblue;
+    padding: 0;
+    border: none;
+}
+
+.download_button{
+    width:20vw;
+    height:50px;
+    text-align:center;
+    font-size:20px;
+    margin-left:100px;
+    background-color: orange;
+    padding: 0;
+    border: none;
+}
+
+.image_preview{
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.image_preview img{
+    margin: 0 auto;
+}
+
+.toolbar{
+    position:relative;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image_queue{
+    position: fixed;
+    background-color: azure;
+    right: 0;
+}
