@@ -1,0 +1,214 @@
+/* hide scrollbar */
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  button{
+    border: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: VT323;
+}
+/* ABOVE REMOVES DEFAULT HTML STYLE */
+
+  body {
+      /* background-color: blue; */
+    background-color:  rgba(63, 63, 63, 1);
+    /* overflow-x: hidden;  */
+  }
+
+
+.container{
+    width: 85vw;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+
+.title_page{
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    height: 100vh;
+    text-align:center;
+    display:grid;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.title_page h1{
+    padding-top: 5vh;
+    color: red;
+    font-size: 100px;
+}
+
+
+.upload_button{
+    border: none;
+    width:35vw;
+    height:20vh;
+    text-align:center;
+    font-size: 7vh;
+    justify-self: center; 
+    background-color: lightblue;
+}
+
+.title_page .scroll_direct{
+    color: grey;
+    font-size: 50px;
+    position: relative;
+    bottom: 0;
+}
+
+.scroll_direct .t{
+    /* color: red; */
+    position: absolute;
+    bottom: 0;
+    width: 60vw;
+    left: -12.5vw;
+
+}
+
+
+
+.examples_sidescroll{
+    background-color:rgba(41, 41, 41, 1) ;
+    justify-content: space-around;
+    align-items: center;
+    display:flex;
+    height: 30vh;
+    width: 100vw;
+}
+
+.examples_sidescroll img{
+    object-fit: cover;
+    height: 90%;
+    width: 30%;
+}
+
+/* 
+.main_functionality{
+    // This class will hold image_queue_sidebar, active_image_window, and popup_button in a grid
+    display: grid; 
+    grid-template-columns: 1fr 4fr 1fr; // this is the ratio of grid sizes 
+    grid-gap: 10px;
+    height: 600px; 
+    align-content: center;
+}
+ */
+
+.image_queue_sidebar{
+    /* border: 1px solid black; */
+    justify-self:center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.active_image{
+    height: 100vh;
+    display: grid;
+    /* justify-content: space-between; */
+    justify-content: center;
+
+}
+
+.toolbar{
+    margin-top: 4vh;
+    background: #D9D9D9;
+    height: 15vh;
+    justify-self:center;
+    text-align: center;
+    width: 100%;
+}
+
+.active_image_window{
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+    background-color: black;
+
+}
+
+.active_image_window img{
+    height: 60vh;
+}
+.upload_download{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+}
+
+.upload_download_section {
+    display: grid;
+    /* text-align: center; */
+    /* justify-content: start; */
+    
+    grid-template-columns: 1fr 1fr;
+    
+    
+    /* margin: 4vh; */
+}
+
+.left_upload_button{
+    /* align-items:right;
+    justify-content:right; */
+    justify-self: end;
+    
+}
+.right_download_button{
+    /* align-items: left;
+    justify-content: left; */
+    justify-content:start;
+
+    
+}
+.upload_download button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20vw;
+    font-size: 4vw;
+    color: black;
+}
+
+.upload_b{
+    background: #484DD5;
+}
+
+.download_b{
+    background: #FC4040;
+}
+
+.popup_button{
+    /* writing-mode: vertical-rl; */
+    justify-self:center;
+    text-align: center;
+    background-color: greenyellow;
+}
+
+.share{
+    background: #B00000;
+    height: 30vh;
+    width: 100vw;
+    display: grid;
+}
+
+.share h1{
+    text-align: center;
+    font-size: 10vh;
+}
+
+

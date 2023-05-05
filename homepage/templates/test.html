@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Pixelator</title>
+        <link rel = "stylesheet" href="{% static 'mainPage.css' %}"/>
+        <script src="{% static 'Functions.js' %}"></script>
+    </head>
+
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url "homepage" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- <p><input type="submit" value="Upload"/></p> -->
+            <input id="upfile" type="file" name="docfile" onchange="this.form.submit()" hidden/> 
+            <button type = "button" class="upload_button" onclick="onClick()" onmouseover=onHover(this) onmouseout=offHover(this)>+New Image</button>
+        </form>
+    </body>
+</html>

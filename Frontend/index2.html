@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="mainPage2.css" />
+    <script src="Functions2.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+    </style>
+  </head>
+  <body>
+    <section id="front">
+      <div class="title_page container">
+        <h1>8BitMe!</h1>
+        <button
+          class="upload_button"
+          onmouseover="onHover(this)"
+          onmouseout="offHover(this)"
+          onclick="onClick()"
+        >
+          <t>Upload Here</t>
+        </button>
+        <a class="scroll_direct" href="#scroll">
+         <t class="t"> See what others have done <br />V<t/>
+        </a>
+      </div>
+    </section>
+    <section id="scroll">
+      <div class="examples_sidescroll container">
+        <img src="temp_media/cursed2.png" alt="lasag" />
+        <img
+          src="temp_media/burgies.jpg"
+          width="140%"
+          height="100%"
+          alt="lasag"
+        />
+        <img
+          src="temp_media/judge.jpeg"
+          width="200%"
+          height="100%"
+          alt="lasag"
+        />
+      </div>
+    </section>
+    <section id="active">
+      <div class="active_image container">
+        <div class="toolbar">
+          <h1>Toolbar</h1>
+        </div>
+        <div class="active_image_window">
+          <img src="temp_media/cursed2.png" alt="lasag" />
+        </div>
+        <div class="upload_download container">
+          <form id="form-upload" action="{% url "homepage" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- <p><input type="submit" value="Upload"/></p> -->
+            <input id="upfile" type="file" name="docfile" onchange="this.form.submit()" hidden/> 
+            <button type = "button" class="upload_b" onclick="onClick()" onmouseover=onHover(this) onmouseout=offHover(this)>Upload</button>
+          </form>
+          <button class="download_b" onmouseover="onHover(this)" onmouseout="offHover(this)" onclick="onClick()"> Download</button>
+        </div>
+      </div>
+    </section>
+    <section class="share container">
+      <h1>SHARE!</h1>
+      <div class="share_buttons_container container">
+        <a href="twitter.com"></a>
+      </div>
+    </section>
+  </body>
+</html>

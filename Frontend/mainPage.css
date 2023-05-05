@@ -1,64 +1,176 @@
+.rows{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
 .title{
     text-align:center;
     font-size: 32px;
-    top: 0;
+    color: red;
+    background-color: grey;
 }
 .buttons_container{
-    position:relative;
-    width: 100vw;
-    display: flex;
-    justify-content: space-evenly;
-    z-index: 99;
-    /* top: 0; */
-    /* padding-inline: 600px;
-    display: inline-block;
-    margin: 0 auto;
-    justify-content: center; */
+    /* display: grid;  */
+    /* grid-template-columns: 1fr 1fr; this is the ratio of grid sizes */
+    /* grid-gap: 100px;  */
+    background-color: grey;
+    text-align: center;
+    width: 100%; 
 }
 
-.upload_button{
-    width:20vw;
+.examples_sidescroll{
+    background-color: rgb(41, 41, 41);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 10px;
+<<<<<<< HEAD
+    
+
+}
+
+.image_queue_child_image{
+    max-width: 25%;
+    
+    height: auto;
+   
+}
+
+=======
+    
+
+}
+
+.image_queue_child_image{
+    max-width: 25%;
+    
+    height: auto;
+   
+}
+
+>>>>>>> 1622e935f4cb8dffddbd0a8bcdf2cfc9b0fe3a45
+.top_upload_button {
+    width:250px;
     height:50px;
     text-align:center;
     font-size: 20px;
-    margin-right:100px;
+    justify-self: center;
     background-color: lightblue;
-    padding: 0;
-    border: none;
+    margin-bottom: 20px;
 }
 
-.download_button{
-    width:20vw;
-    height:50px;
-    text-align:center;
-    font-size:20px;
-    margin-left:100px;
-    background-color: orange;
-    padding: 0;
-    border: none;
-}
 
-.image_preview{
-    position: relative;
-    width: 80vw;
-    height: 80vh;
-    margin: 0 auto;
-    align-items: center;
-}
 
-.image_preview img{
-    margin: 0 auto;
+.active_image_container{
+    height: 700px; 
+    width: 100%; 
+    align-content: center;
+    justify-content: center;
+    background-color: grey;
 }
 
 .toolbar{
-    position:relative;
-    width: 80vw;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+<<<<<<< HEAD
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; /* this is the ratio of grid sizes */ 
+    grid-gap: 40px;
+    
 }
 
-.image_queue{
-    position: fixed;
-    background-color: azure;
-    right: 0;
+.pixelation_slider{
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
 }
+
+.contrast_slider{
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.black_border_tick{
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+}
+
+.active_image_window{
+    text-align:center;
+    margin-top: 20px;
+}
+
+=======
+    
+}
+
+.active_image_window{
+    text-align:center;
+    margin-top: 20px;
+}
+
+>>>>>>> 1622e935f4cb8dffddbd0a8bcdf2cfc9b0fe3a45
+.upload_download_container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* this is the ratio of grid sizes */
+    grid-gap: 425px; 
+    width: 100%; 
+    background-color:rgb(68, 68, 68)
+}
+
+.upload_button{
+    width:200px;
+    height:50px;
+    text-align:center;
+    font-size: 20px;
+    justify-self: end; /*moves button to right side of grid*/
+    background-color: lightblue;
+}
+
+.download_button{
+    width:200px;
+    height:50px;
+    text-align:center;
+    font-size:20px;
+    background-color: red;
+}
+
+.popup_button{
+    writing-mode: vertical-rl;
+    justify-self:center;
+    text-align: center;
+    background-color: greenyellow;
+}
+
+.share_container{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+<<<<<<< HEAD
+.share_grid{
+    margin: auto;
+    text-align: center;
+    max-width: 20%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; /* this is the ratio of grid sizes */ 
+    grid-gap: 40px;
+    margin-bottom: 40px;
+}
+
+
+=======
+>>>>>>> 1622e935f4cb8dffddbd0a8bcdf2cfc9b0fe3a45

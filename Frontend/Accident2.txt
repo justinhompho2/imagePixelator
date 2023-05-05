@@ -1,0 +1,9 @@
+Accidentally pushed my changes to main instead of this branch.
+I'm writing this so that I can make a pull request for main anyways.
+I only added frontend elements.
+
+Summary of work:
+-Added remaining elements from figma mockup
+-Switched from inline-block to grid-row system which is better for window resizing(more reactive)
+- Added placeholder images to display how the website would look after functionality is implemented
+- Started work on the .js file adding button functionality...

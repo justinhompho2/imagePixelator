@@ -1,33 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="mainPage.css" />
-  </head>
-  <body>
-    <div class="title">
-      <h1>ImagePixelator</h1>
+<head>
+    <meta charaset = "utf-8">
+    <link rel = "stylesheet" href="mainPage.css"/>
+    <!-- <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <script src="Functions.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+</head>
+<body>
+
+<!-- How to start the local server to use python scripts with the frontend:
+- Type "python -m http.server" in the terminal in vscode or whatever ide you are using
+- navigate to "localhost:8000" in your web browser
+- Click on the file you want to run -->
+
+
+    <!-- https://blog.logrocket.com/pyscript-run-python-browser/ -->
+<!-- <py-script src = "./IP.py">
+    <h1>Check here to see if the server is working</h1>
+    <h3>Need to run "python -m http.server" in terminal to host HTTP server on port 8000</h3>
+</py-script> -->
+
+<!-- Someone else please merge my request
+If I'm reading this, make sure to merge the last week's request before committing to my branch
+This is so I can open up another merge request for someone else to not merge -->
+<py-config>
+    [[fetch]]
+    files = ["./IP.py"]
+</py-config>
+<py-script>
+    from IP import testLink
+    testLink()
+</py-script>
+
+<!-- <div class = "rows">
+    <div class = "title">
+        <h1>8BitMe!</h1>
+    </div>
+    
+    <div class = "buttons_container">
+        <button class = "top_upload_button" onmouseover=onHover(this) onmouseout=offHover(this) onclick = onClick()>+New Image</button>
     </div>
 
-    <div class="buttons_container">
-      <button class="upload_button">+New Image</button>
-      <button class="download_button">Download</button>
+    <div class = "examples_sidescroll">
+        <div class = "image_queue_child_image">
+            <img src="temp_media/cursed2.png" width = 250% height = 100% alt = "lasag" >
+        </div>
+        <div class = "image_queue_child_image">
+            <img src="temp_media/burgies.jpg" width = 140% height = 100% alt = "lasag" >
+        </div>
+        <div class = "image_queue_child_image">
+            <img src="temp_media/judge.jpeg"  width = 200% height = 100% alt = "lasag" >
+        </div>
     </div>
-    <div class="image_preview">
-      <img src="assets/example_pixel.jpg" />
+    
+    <div class = "active_image_container">
+        <div class = "toolbar">
+            
+            <h2>Pixelation</h2>
+            <h2>Contrast</h2>
+            <h2>BlackBorder?</h2>
+            <input type="range" min="1" max="100" value="0" class="pixelation_slider" id="Pixelation">
+            <input type="range" min="1" max="100" value="0" class="contrast_slider" id="Contrast">
+            <input type="checkbox" class = "black_border_tick" id="BlackBorder?" name="BlackBorder?" value="Si">
+        </div>
+        <div class= "active_image_window">
+            <img src="temp_media/cursed2.png" alt = "lasag">
+        </div>
     </div>
-    <div class="toolbar">
-      <a class="phone" href="tel: 630-231-1701"
-        ><img src="/assets/search.svg" /> </a
-      ><a class="phone" href="tel: 630-231-1701"
-        ><img src="/assets/search.svg" /> </a
-      ><a class="phone" href="tel: 630-231-1701"
-        ><img src="/assets/search.svg" />
-      </a>
+    
+    <div class = "upload_download_container">
+        <button class = "upload_button" onmouseover=onHover(this) onmouseout=offHover(this) onclick = onClick()>Upload Image</button>
+        <button class = "download_button" onmouseover=onHover(this) onmouseout=offHover(this) onclick = onClick()>Download</button>
     </div>
-    <div class="image_queue">
-      <img src="assets/example_pixel.jpg" width="100px" />
-      <img src="assets/example_pixel.jpg" width="100px" />
-      <img src="assets/example_pixel.jpg" width="100px" />
+
+    <div class = "share_container">
+        <h1>Share!</h1>
+        <div class = "share_grid">
+            <input type= "image" src = "temp_media/insta.jpg" width = 60px height = 60px text-align = center onclick = "goToInsta();"/>
+            <input type="image" src = "temp_media/twit.png" width = 60px height = 60px onclick = "goToTwit();"/>
+            <input type="image" src = "temp_media/faceRipper.png" width = 100px height = auto onclick = "goToFace();"/>
+        </div>
     </div>
-  </body>
+
+    
+</div> -->
+
+
+
+
+</body>
 </html>

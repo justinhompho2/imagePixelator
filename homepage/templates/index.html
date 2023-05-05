@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'mainPage2.css' %}" />
+    <script src="{% static 'Functions2.js' %}"></script>
+    
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+      
+    </style>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=645468cd8422190019dbb7dc&product=image-share-buttons&source=platform" async="async"></script>
+  </head>
+  <body>
+    <section id="front">
+      <div class="title_page container">
+        <h1>8BitMe!</h1>
+        <button
+          class="upload_button"
+          onmouseover="onHover(this)"
+          onmouseout="offHover(this)"
+          onclick="onClick()"
+        >
+          <t>Upload Here</t>
+        </button>
+        <a class="scroll_direct" href="#scroll">
+         <t class="t"> Examples of what you can make <br />V<t/>
+        </a>
+      </div>
+    </section>
+    <div class = "examples_sidescroll">
+        
+        <!--TODO: add functionality for indicating which image is selected and navigating the queue-->
+        <div class = "examples_sidescroll img">
+            <img src="{% static 'temp_media/I.png' %}" alt = "lasag" width = 20% height = auto>
+            
+        </div>
+        <div class = "examples_sidescroll img">
+            <img src="{% static 'temp_media/quad.png' %}" alt = "lasag" width = 20% height = auto>
+        </div>
+        <div class = "examples_sidescroll img">
+            <img src="{% static 'temp_media/alma.png' %}" alt = "lasag" width = 20% height = auto>
+        </div>
+        
+    </div>
+    
+
+
+    <section id="active">
+      <div class="active_image container">
+        <div class="active_image_window">
+          <img src="data:image/png;base64,{{img_str}}"/>
+        </div>
+
+          
+            <div class="upload_download container">
+              <form id="form-upload" action="{% url "homepage" %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label>pixel size:</label><br>
+                <input type="text" name="pixelsize"><br>
+            <!-- <p><input type="submit" value="Upload"/></p> -->
+                <input id="upfile" type="file" name="docfile" onchange="this.form.submit()" hidden/> 
+                <button type = "button" class="upload_b" onclick="onClick()" onmouseover=onHover(this) onmouseout=offHover(this)>Upload</button>
+              </form>
+              <form action="{% url "homepage" %}" method='post'>
+                {% csrf_token %}
+                <button type="submit" name="download" class="download_b" onmouseover="onHover(this)" onmouseout="offHover(this)"> Download</button>
+              </form>
+            </div>
+          
+          
+        
+      </div>
+  </body>
+</html>
